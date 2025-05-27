@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Polaroid Photo Maker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Polaroid Photo Maker</h2>
+      <label for="upload" class="upload-label">Escolher foto</label>
+      <input type="file" id="upload" accept="image/*" />
+      <div class="color-picker-wrapper">
+        <label for="polaroidColor" class="color-label">Cor da borda:</label>
+        <input type="color" id="polaroidColor" value="#ffffff" />
+      </div>
+      <div class="format-picker-wrapper">
+        <label for="polaroidFormat" class="color-label">Formato:</label>
+        <select id="polaroidFormat">
+          <option value="classic">Clássico</option>
+          <option value="landscape">Paisagem</option>
+          <option value="portrait">Retrato</option>
+          <option value="mini">Mini</option>
+          <option value="large">Grande</option>
+        </select>
+      </div>
+      <input
+        type="text"
+        id="polaroidText"
+        maxlength="40"
+        placeholder="Escreva algo na borda..."
+        class="polaroid-text-input"
+      />
+      <canvas
+        id="canvas"
+        width="360"
+        height="440"
+        style="display: none"
+      ></canvas>
+      <div class="filters-wrapper">
+        <button class="filter-btn" data-filter="none">Normal</button>
+        <button class="filter-btn" data-filter="grayscale">P&B</button>
+        <button class="filter-btn" data-filter="sepia">Sépia</button>
+        <button class="filter-btn" data-filter="brightness">Brilho</button>
+        <button class="filter-btn" data-filter="contrast">Contraste</button>
+      </div>
+      <button id="download" disabled>Baixar imagem polaroid</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
