@@ -47,4 +47,4 @@ Abra uma issue ou envie um pull request!
 
 ---
 
-Desenvolvido com 💙 para fins educacionais e criativos.
+Desenvolvido para fins educacionais e criativos.
